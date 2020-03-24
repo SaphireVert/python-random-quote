@@ -7,14 +7,15 @@ def primary():
   f.close()
 
   print(quotes[0])
-  last = 13
-  rnd = random.randint(0, last)
 
-  print(quotes[rnd])
+  for x in range(0, 2):
+    last = 13
+    rnd = random.randint(0, last)
+    print(quotes[rnd])
 
+  with open('quotes.txt', 'a') as file:
+    file.write('hey!!!!!' + '\n')
 
 
 if __name__== "__main__":
   primary()
-
-
